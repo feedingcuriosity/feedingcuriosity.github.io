@@ -1,11 +1,36 @@
 body, html {
     height: 100%;
     margin: 0;
+    color: #343a40;
+    /* font-family: 'Just Another Hand', cursive; */
+    font-family: 'Amatic SC', cursive;
+    /* font-family: 'Barlow Condensed', sans-serif; */
+    font-size: 16px;
 }
 
-.bg {
+
+
+/* NAV BAR */
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {  
+    color: #E9D985;
+}
+
+.navbar-nav  {
+    /* padding: 2% 0;
+    background-color:#343a40; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav-item {
+    font-size: 300%;
+    padding-right: 5%;
+}
+
+/* welcome screen */
+.bg {   
     /* The image used */
-    background-image: url("asphalt-blue-clouds_low.jpg");
+    background-image: url("color-flora-flowers-945453.jpg");
     /* Full height */
     height: 100%;
     /* Center and scale the image nicely */
@@ -17,63 +42,127 @@ body, html {
 .titlecentered {
     position: absolute;
     top: 50%;
-    left: 59%;
+    left: 65%;
     transform: translate(-50%, -50%);
-    font-size: 80px;
-    color: #3e352c;
+    color: #343a40;
+    font-size: 100%;
     text-shadow: 1px 1px 10px white,  -1px 1px 10px white, 1px -1px 10px white;
     font-weight: 700;
 }
 
-#kasandraWells, #skills, #portfolio, footer {
-    color: white;
+.title {
+    font-size: 600%;
+    white-space: nowrap;
+}
+.subtitle {
+    font-size: 300%;
+}
+
+@media all and (max-width: 655px){
+    .title {
+        font-size: 400%;
+        white-space: nowrap;
+    }
+    .subtitle {
+        font-size: 200%;
+    }
+
+}
+
+#kasandraWells, #portfolio  {
+    background-color: #E9D985;
+    padding:10% 0;
 }
 
 #kasandraWells {
-    background-color: #A1869E;
-    padding:50px 0;
+    padding: 10%;
 }
 #skills {
-    background-color: #7180AC;
-    padding: 50px 0;
+    background-color: white;
+    padding: 10% 0;
 }
 /*Must change timeline background-color in timeline editor below*/
 #timeline {
-    background-color: #BBADA0;
     padding: 50px 0 0 0;
 }
 
-#timeline h1{
-    color:white;
+.row {
+    margin: auto;
 }
 
+.text{
+    /* background: white; */
+    width: 100%;
+    text-align: left;
+    /* font-size: 3vw; */
+}
+
+.row p {    
+    max-height: 320px;
+}
+
+.row .image {
+    text-align: center;
+}
+
+
+/* #timeline h1{
+    color: black;
+} */
+
 #portfolio {
-    background-color: #A1869E;
-    padding: 50px 0;
+    background-color: #E9D985;
+    padding: 10% 0;
 }
 
 footer {
-    background-color: #7180AC;
-    padding: 50px 0;
+    /* background-color: #E9D985;
+    padding: 50px 0; */
+    /* The image used */
+    background-image: url("blur-colors-illuminated-714912.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #BCA118;
 }
 
-#kasandraWells p {
-    font-size: 20px;
-    color: #3e352c;
+#contact a {
+    color: #BCA118;
 }
+
+#contact {
+    padding-top: 25%;
+}
+
+
 
 h1 {
     text-transform:uppercase;
+    font-weight: bold;
+    padding-bottom: 10%;
 }
 
+h3 {
+    font-weight: bold;
+}
 
+.container {
+    text-align: center;
+}
 
+.fab, .fas {
+    color: #BCA118;
+    font-size: 5em;
+}
+
+#skills, #kasandraWells, #portfolio, #timeline {
+    font-family: 'Barlow Condensed', sans-serif;
+}
 /*==================================================================================
-    ================================================================================
-    ================================================================================
-    TIMELINE STYLING================================================================
-    ================================================================================
-    ================================================================================
+    TIMELINE STYLING
  =================================================================================*/
 /*POSITIONING*/
 #timeline .demo-card-wrapper {
@@ -159,7 +248,6 @@ h1 {
 /*CREATE BOX FOR YEAR*/
 #timeline .demo-card .head .number-box {
     display: inline;
-    float: left;
     margin: 15px;
     padding: 10px;
     font-size: 25px;
@@ -190,8 +278,8 @@ h1 {
     border: 1px solid rgba(191, 191, 191, 0.4);
     border-top: 0;
     padding: 15px;
-    max-width:;
-    max-height:;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 1000px) {
@@ -338,8 +426,10 @@ h1 {
 
 /*Change background-color here*/
 #timeline {
-    padding:;
-    background: #BBADA0;
+    padding: 10%;
+    background: white;
+    text-align: center;
+    
 }
 
     #timeline .demo-card:nth-child(odd) {
@@ -373,8 +463,22 @@ h1 {
     #timeline .demo-card:nth-child(2) {
         margin-top: 180px;
     }
-}
 
+    p {
+        font-size: 175%;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
 
-/*PADDING*/
-
+    img { 
+        max-width: 100%; 
+        height: auto;
+        flex-shrink: 1;
+     }
+     .bodytemp img {
+         max-width: 300px;
+     }

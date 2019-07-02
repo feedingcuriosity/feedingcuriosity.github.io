@@ -1,18 +1,24 @@
 ﻿<!doctype html>
-<html lang="en">
+<html>
 <head>
     <!-- Required meta tags (bootstrap starter template) -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--scripts for scrollspy -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--script for fontawesome icons-->
+    <script src="https://kit.fontawesome.com/b8bc25f5ed.js"></script>
     <!-- Bootstrap CSS (bootstrap starter template)  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Barlow+Condensed|Just+Another+Hand&display=swap" rel="stylesheet">
     <!--KLW Additions-->
-
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Kasandra Wells</title>
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="50"> <!--spy on the body element using bootstrap scrollspy-->
     <!--NAVIGATION-->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
 
@@ -21,17 +27,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#kasandraWells">Kasandra Wells <span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link kasandra" href="#kasandraWells">Kasandra Wells</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#timeline">Experience</a>
-                </li>
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                    <a class="nav-link" href="#timeline">Experience</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -45,166 +51,112 @@
 
     <div class="bg">
         <div class="titlecentered">
-            Kasandra Wells
+            <div class="title">
+                Kasandra Wells
+            </div>
+            <div class="subtitle">
+                Full-Stack Software Developer
+            </div>
         </div>
     </div>
 
     <!--ABOUT ME-->
     <div id="kasandraWells">
-        <div class="container">
-            <h1 align="center">Get to know me</h1><br>
-            <div class="row">
-                <div class="col-lg-6" style="background-color:white; border-radius:5px; padding-top: 40px; ">
-                    <p>
-                        I am a full-stack <strong>software developer</strong> looking to bring my professional experience as a consultant engineer to the tech industry.<br /> <br />
-                        I'm leveraging skills in <strong>project management</strong>, engineering judgement, <strong>data analysis</strong>, solving client-specific problems, and strategic planning.<br /> <br />
-                        I am client focused, an empathic listener, and <strong>motivated to deliver quality</strong>.
-                    </p>
-                </div>
-                <div class="col-lg-6">
-                    <img src="20180602_140739.jpg" alt="" class="img-thumbnail" />
-                </div>
-
+        <div class="row">
+            <div class="col-lg-6 text">
+                <p>
+                    I am a full-stack <strong>software developer</strong> looking to bring my professional experience as a consultant engineer to the tech industry.<br /> <br />
+                    I'm leveraging skills in <strong>project management</strong>, engineering judgement, <strong>data analysis</strong>, solving client-specific problems, and strategic planning.<br /> <br />
+                    I am client focused, an empathic listener, and <strong>motivated to deliver quality</strong>.
+                </p>
+            </div>
+            <div class="col-lg-6 image">
+                <img src="20180602_140739-2.jpg" alt="" class="img-thumbnail headshot" />
             </div>
         </div>
     </div>
 
 
-    <!--SKILLS-->
+    <!--DEVELOPER SKILLS-->
     <div id="skills">
-        <div class="container">
-            <h1 align="center">Skills</h1><br>
-            <div class="row">
-                <div class="col-md-4" my-10>
-                    <img class="img-fluid img-thumbnail" src="./html5.jpg" alt="" width="225px" height="225px" />
-                    <h3>HTML/CSS</h3>
-                    <p>Bootstrap</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid img-thumbnail" src="./js.jpg" alt="" width="225px" height="225px" />
-                    <h3>Javascript</h3>
-                    <p>jQuery</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid img-thumbnail" src="./db.jpg" alt="" width="225px" height="225px" />
-                    <h3>SQL</h3>
-                    <p>T-SQL</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid img-thumbnail" src="./python.jpg" alt="" width="225px" height="225px" />
-                    <h3>Python</h3>
-                    <p>Django</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid img-thumbnail" src="./courseC.jpg" alt="" width="225px" height="225px" />
-                    <h3>C#</h3>
-                    <p>.Net</p>
-                    <p>MVC</p>
-                </div>
-                <div class="col-md-4">
-                    <img class="img-fluid img-thumbnail" src="./proj.jpg" alt="" width="225px" height="225px" />
-                    <h3>Project Management</h3>
-                    <p>Agile/Scrum</p>
+            <div class="container">
+                <h1>Developer Skills</h1><br>
+                <div class="row">
+                    <div class="col-md-2">
+                        <i class="fas fa-code"></i>
+                        <h3>C# & .Net Framework</h3>
+                        <p>MVC<br>Entity Framework</p>
+                    </div>
+                    <div class="col-md-2" my-10>
+                        <i class="fab fa-html5"></i>
+                        <h3>HTML/CSS</h3>
+                        <p>Bootstrap</p>
+                    </div>
+                    <div class="col-md-2">
+                        <i class="fab fa-js"></i>
+                        <h3>Javascript</h3>
+                        <p>jQuery<br>Ajax</p>
+                    </div>
+                    <div class="col-md-2">
+                        <i class="fas fa-database"></i>
+                        <h3>SQL</h3>
+                        <p>T-SQL</p>
+                    </div>
+                    <div class="col-md-2">
+                        <i class="fab fa-python"></i>
+                        <h3>Python</h3>
+                        <p>Django</p>
+                    </div>
+                    
+                    <div class="col-md-2">
+                            <i class="fas fa-code-branch"></i>
+                            <h3>Version Control</h3>
+                            <p>Github<br>Azure DevOps</p>
+                        </div>
                 </div>
             </div>
+            <!-- <div class="container">
+                    <h1>Professional Skills</h1><br>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <i class="fas fa-code"></i>
+                            <h3>Agile</h3>
+                        </div>
+                        <div class="col-md-2" my-10>
+                            <i class="fab fa-html5"></i>
+                            <h3>Consulting</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-js"></i>
+                            <h3>Account Management</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fas fa-database"></i>
+                            <h3>SQL</h3>
+                        </div>
+                        <div class="col-md-2">
+                            <i class="fab fa-python"></i>
+                            <h3>Python</h3>
+                        </div>
+                        
+                        <div class="col-md-2">
+                                <i class="fas fa-code-branch"></i>
+                                <h3>Version Control</h3>
+                            </div>
+                    </div>
+                </div> -->
         </div>
-    </div>
-
-    <!--Experience-->
-    <section id="timeline">
-        <h1 align="center">Experience</h1>
-
-        <div class="demo-card-wrapper">
-            <div class="demo-card demo-card--step1">
-                <div class="head">
-                    <div class="number-box">
-                        <span>2008</span>
-                    </div>
-                    <h2><span class="small">Seattle Univeristy</span> BS Civil Engineering</h2>
-                </div>
-                <div class="bodytemp">
-                    <img src="./Science-Eng_SealMark.png" alt="Graphic">
-                </div>
-            </div>
-
-            <div class="demo-card demo-card--step2">
-                <div class="head">
-                    <div class="number-box">
-                        <span>2011</span>
-                    </div>
-                    <h2><span class="small">University of Washington</span> MS Civil Engineering</h2>
-                </div>
-                <div class="bodytemp">
-                    <img src="./Signature_Stacked_Purple_RGB.png" alt="Graphic" height="70%">
-                </div>
-            </div>
-
-            <div class="demo-card demo-card--step3">
-                <div class="head">
-                    <div class="number-box">
-                        <span>2012</span>
-                    </div>
-                    <h2><span class="small">FM Global</span> Consultant Engineer</h2>
-                </div>
-                <div class="bodytemp">
-                    <p>Keeping businesses in business.</p>
-                    <p>Provided on-site engineering analysis and customized solutions to prevent the image below from happening.</p>
-                    <img src="./8712176624_69850aea67_z.jpg" alt="Graphic" height="70%">
-                </div>
-            </div>
-
-            <div class="demo-card demo-card--step4">
-                <div class="head">
-                    <div class="number-box">
-                        <span>2014</span>
-                    </div>
-                    <h2><span class="small">AFM</span> Account Engineer</h2>
-                </div>
-                <div class="bodytemp">
-                    <p>Keeping my book of business in business.</p>
-                    <p>Managed engineering resources, strategized with c-suite customers, and provided business risk intelligence to prevent the image below from happening on my book of business.</p>
-                    <img src="./1097167498_194d546c8f_z.jpg" resize alt="Graphic" height="65%">
-                </div>
-            </div>
-
-            <div class="demo-card demo-card--step5">
-                <div class="head">
-                    <div class="number-box">
-                        <span>2019</span>
-                    </div>
-                    <h2><span class="small">The Tech Academy</span>Software Development</h2>
-                </div>
-                <div class="bodytemp">
-                    <p>Currently studying to become a full-stack software developer.</p>
-                    <img src="the_tech_academy.jpeg" alt="Graphic" height="90%">
-                </div>
-            </div>
-
-            <div class="demo-card demo-card--step6">
-                <div class="head">
-                    <div class="number-box">
-                        <span>2019</span>
-                    </div>
-                    <h2>Could this be you?</h2>
-                </div>
-                <div class="bodytemp">
-                    <p>Let's get in touch to discuss what I can bring to your organization!</p>
-                    <img src="achievement-adult-agreement-1437866.jpg" alt="Graphic" height="90%">
-                </div>
-            </div>
-
-        </div>
-    </section>
+    
 
     <!--PORTFOLIO-->
     <div id="portfolio">
         <div class="container">
-            <h1 align="center">Portfolio</h1>
+            <h1>Coding Projects</h1>
             <div class="row">
                 <div class="col-lg-6">
                     <h2>PIZZA DELIVERY WEBSITE</h2>
                     <h4>(HTML/CSS/JavaScript)</h4>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LslGvM2ZREs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe  src="https://www.youtube.com/embed/LslGvM2ZREs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                     <p>For learning purposes, created a pizza delivery website using HTML/CSS and Javascript. Check it out on my <a href="https://github.com/feedingcuriosity/JavaScript-Pizza-Company-Project" target="_blank" style="color:black;">GitHub.</a></p>
                 </div>
@@ -229,11 +181,101 @@
             </div>
         </div>
     </div>
+
+    <!--Experience-->
+    <section id="timeline">
+        <h1>Professional Experience</h1>
+
+        <div class="demo-card-wrapper">
+            <div class="demo-card demo-card--step1">
+                <div class="head">
+                    <div class="number-box">
+                        <span>2008</span>
+                    </div>
+                    <h2><span class="small">Seattle Univeristy</span> BS Civil Engineering</h2>
+                </div>
+                <div class="bodytemp">
+                    <img src="./Science-Eng_SealMark.png" alt="Graphic">
+                </div>
+            </div>
+
+            <div class="demo-card demo-card--step2">
+                <div class="head">
+                    <div class="number-box">
+                        <span>2011</span>
+                    </div>
+                    <h2><span class="small">University of Washington</span> MS Civil Engineering</h2>
+                </div>
+                <div class="bodytemp">
+                    <img class="uw" src="Signature_Stacked_Purple_RGB copy.png" alt="Graphic">
+                </div>
+            </div>
+
+            <div class="demo-card demo-card--step3">
+                <div class="head">
+                    <div class="number-box">
+                        <span>2012</span>
+                    </div>
+                    <h2><span class="small">FM Global</span> Consultant Engineer</h2>
+                </div>
+                <div class="bodytemp">
+                    <div class="row">
+                        <p>Keeping businesses in business.</p>
+                        <p>Provided on-site engineering analysis and customized solutions to prevent the image below from happening.</p>
+                    </div>
+                    <div class="row">
+                        <img src="./8712176624_69850aea67_z.jpg" alt="Graphic">     
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-card demo-card--step4">
+                <div class="head">
+                    <div class="number-box">
+                        2014
+                    </div>
+                    <h2><span class="small">AFM</span> Account Engineer</h2>
+                </div>
+                <div class="bodytemp">
+                    <div class="row">
+                        <p>Keeping my book of business in business.</p>
+                        <p>Managed engineering resources, strategized with c-suite customers, and provided business risk intelligence to prevent the image below from happening on my book of business.</p>
+                    </div>
+                    <div class="row">
+                        <img src="./1097167498_194d546c8f_z.jpg" resize alt="Graphic">
+                    </div>
+                   
+                </div>
+            </div>
+
+            <div class="demo-card demo-card--step5">
+                <div class="head">
+                    <div class="number-box">
+                        <span>2019</span>
+                    </div>
+                    <h2><span class="small">The Tech Academy</span>Software Development</h2>
+                </div>
+                <div class="bodytemp">
+                    <div class="row">
+                            <p>The Tech Academy in an immersive boot camp with more than 800 hours of instruction and hands-on coding.
+                            Predominantly the program is based on C# and ASP.NET along with the fundamentals of Computer Science, Python,
+                            JavaScript, PHP, HTML, CSS and T-SQL/SQL, Agile/SCRUM and web application development. Completed
+                            numerous practical projects including MVC, LINQ to SQL, EF, JavaScript and Python.</p>
+                    </div>
+                    <div class="row">
+                        <img src="the_tech_academy.jpeg" resize alt="Graphic">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--FOOTER-->
     <footer id="contact">
-        <div class="container" align="center">
+        <div class="container">
             <h1>Contact Me</h1> <br />
-            <a href="http://www.linkedin.com/in/Kasandra-Wells" target="_blank"style="color:black;">Click here to connect with me on linkedin.</a>
+            
+            <a href="http://www.linkedin.com/in/Kasandra-Wells" target="_blank"><i class="fab fa-linkedin" href="http://www.linkedin.com/in/Kasandra-Wells" target="_blank"></i></a>
         </div>
     </footer>
 
