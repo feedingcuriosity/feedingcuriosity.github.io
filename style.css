@@ -292,6 +292,7 @@ h3 {
     font-size: 15px;
     line-height: 18px;
     margin-bottom: 15px;
+    text-align: left;
 }
 
 #timeline .demo-card .bodytemp img {
@@ -481,4 +482,8 @@ h3 {
      }
      .bodytemp img {
          max-width: 300px;
+     }
+
+     .fa-linkedin {
+         padding-left: 5%;
      }
