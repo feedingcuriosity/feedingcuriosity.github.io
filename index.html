@@ -4,6 +4,7 @@
     <!-- Required meta tags (bootstrap starter template) -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!--scripts for scrollspy -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -17,13 +18,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"/>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Barlow+Condensed|Just+Another+Hand&display=swap" rel="stylesheet">
+    <!--customized scripts -->
+    <script type="text/javascript" src="portfolio.js"></script>
     <!--KLW Additions-->
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Kasandra Wells</title>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="50"> <!--spy on the body element using bootstrap scrollspy-->
     <!--NAVIGATION-->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" id="navigation">
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -112,42 +115,12 @@
                     </div>
                     
                     <div class="col-md-2">
-                            <i class="fas fa-code-branch"></i>
-                            <h3>Version Control</h3>
-                            <p>Github<br>Azure DevOps</p>
-                        </div>
+                        <i class="fas fa-code-branch"></i>
+                        <h3>Version Control</h3>
+                        <p>Github<br>Azure DevOps</p>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="container">
-                    <h1>Professional Skills</h1><br>
-                    <div class="row">
-                        <div class="col-md-2">
-                            <i class="fas fa-code"></i>
-                            <h3>Agile</h3>
-                        </div>
-                        <div class="col-md-2" my-10>
-                            <i class="fab fa-html5"></i>
-                            <h3>Consulting</h3>
-                        </div>
-                        <div class="col-md-2">
-                            <i class="fab fa-js"></i>
-                            <h3>Account Management</h3>
-                        </div>
-                        <div class="col-md-2">
-                            <i class="fas fa-database"></i>
-                            <h3>SQL</h3>
-                        </div>
-                        <div class="col-md-2">
-                            <i class="fab fa-python"></i>
-                            <h3>Python</h3>
-                        </div>
-                        
-                        <div class="col-md-2">
-                                <i class="fas fa-code-branch"></i>
-                                <h3>Version Control</h3>
-                            </div>
-                    </div>
-                </div> -->
         </div>
     
 
@@ -156,30 +129,58 @@
         <div class="container">
             <h1>Coding Projects</h1>
             <div class="row">
-                <div class="col-lg-6">
-                    <h2>PIZZA DELIVERY WEBSITE</h2>
-                    <h4>(HTML/CSS/JavaScript)</h4>
-                    <iframe  src="https://www.youtube.com/embed/LslGvM2ZREs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-                    <p>For learning purposes, created a pizza delivery website using HTML/CSS and Javascript. Check it out on my <a href="https://github.com/feedingcuriosity/JavaScript-Pizza-Company-Project" target="_blank" style="color:black;">GitHub.</a></p>
+                <div class="col-lg-6 Project">
+                    <figure> <img id="Project1" src="CodingProjects\HomePage.PNG" alt="Created a banner page for a fictional french restaurant located in Seattle. Technologies used: HTML, CSS, JavaScript, Bootstrap, JQuery, Popper.js, and GoogleAPIs."></figure>
+                    <h3>Front-End Live Project</h3>
+                    <p>HTML/CSS/JavaScript</p>
+                    <!-- Modal 1 -->
+                    <div id="myModal1" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img01">
+                        <div id="caption1"></div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h2>LIBRARY MANAGEMENT DATABASE</h2>
-                    <h4>(SQL)</h4>
-                    <img class="img-fluid img-thumbnail d-block mx-auto" src="SQL Project Image.PNG" alt="" width="360" />
-                    <p>Created library management system database with procedural queries using T-SQL. Check it out on my <a href="https://github.com/feedingcuriosity/SQL-Final-Project-LibraryManagementSystem-" target="_blank" style="color:black;">GitHub.</a></p>
+                <div class="col-lg-6 Project">
+                    <figure> <img id="Project2" src="CodingProjects\CLogin.png" alt="Contributed to an existing code base for an ASP.NET MVC web application to track employee timecard entries. Technologies used: Code First Entity Framework, Razor Engine, JavaScript, CSS, and SQL Server Database."></figure>
+                    <h3>C# Live Project</h3>
+                    <p>ASP.NET MVC</p>
+                    <!-- Modal 2 -->
+                    <div id="myModal2" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img02">
+                        <div id="caption2"></div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h2>MOVE .txt FILES</h2>
-                    <h4>(Python)</h4>
-                    <img class="img-fluid img-thumbnail d-block mx-auto" src="pythonDrill124.PNG" alt="" width="360" />
-                    <p>Created a GUI that allows the user to access a source and destination folder on thier system. The function then moves .txt files to the destination folder and creates a database to store impacted filenames and last modified timestamp. Check it out on my <a href="https://github.com/feedingcuriosity/The-Tech-Academy-Basic-Python-Projects/tree/master/PythonDrill124" target="_blank" style="color:black;">GitHub.</a></p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 Project">
+                    <figure> <img id="Project3" src="CodingProjects\CarInsuranceProjectpg1.PNG" alt="Built an ASP.NET MVC web application to generate car insurance quotes based on requested user information and pre-defined price indicators."></figure>
+                    <h3>Car Insurance Web App</h3>
+                    <p>ASP.NET MVC</p>
+                    <!-- Modal 3 -->
+                    <div id="myModal3" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img03">
+                        <div id="caption3"></div>
+                    </div>
                 </div>
-                <div class="col-lg-6">
-                    <h2>Car Insurance Quote Application</h2>
-                    <h4>(C#/MVC)</h4>
-                    <img class="img-fluid img-thumbnail d-block mx-auto" src="CarInsuranceProjectpg2.PNG" alt="" width="360" />
-                    <p>Created an application that provides car insurance quotes and stores driver information and quote to a database that can be accessed using the admin page. Check it out on my <a href="https://github.com/feedingcuriosity/The-Tech-Academy-C-Sharp-Coding-Projects/tree/master/CarInsuranceProject247" target="_blank" style="color:black;">GitHub.</a></p>
+                <div class="col-lg-6 Project">
+                    <figure> <img id="Project4" src="CodingProjects\pizzaIndex.PNG" alt="Created a fictional online pizza ordering system using HTML, CSS, and JavaScript. The user would use radio buttons to select items from the menu, then click 'order'. A modal would appear to confirm order details and total cost."></figure>
+                    <h3>Pizza Delivery Web App</h3>
+                    <p>HTML/CSS/JavaScript/JQuery</p>
+                    <!-- Modal 4 -->
+                    <div id="myModal4" class="modal">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="img04">
+                        <div id="caption4" class="caption"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                </div>
+                <div class="col-lg-6 Project" style="margin: auto;">
+                    <a href="https://github.com/feedingcuriosity" target="_blank"><figure> <img id="Project6" src="CodingProjects\github-logo.jpeg" alt="Check out github" ></figure></a>
+                    <h3>Check out my GitHub to see more coding experience.</h3>
                 </div>
             </div>
         </div>
@@ -288,13 +289,117 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
     
-    <!-- To collapse navbar again after link is clicked -->
-    <!-- To scroll upon click -->
     <script>
-        $('.nav-link').on('click',function() {
-        $('.navbar-collapse').collapse('hide');
-        });
+    //To collapse navbar again after link is clicked
+// To scroll upon click
+
+$('.nav-link').on('click',function() {
+    $('.navbar-collapse').collapse('hide');
+    });
+
+//Coding Projects Display
+    // MODAL1
+    var modal = document.getElementById("myModal1");
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("Project1");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption1");
+
+    // Get the NavBar to hide when modal is active
+    var navigation = document.getElementById("navigation");
+
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    navigation.style.display= "none"; //hide the navbar when modal appears
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+    modal.style.display = "none";
+    }
+
+    // MODAL2
+    var modal = document.getElementById("myModal2");
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("Project2");
+    var modalImg = document.getElementById("img02");
+    var captionText = document.getElementById("caption2");
+
+    // Get the NavBar to hide when modal is active
+    var navigation = document.getElementById("navigation");
+
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    navigation.style.display= "none"; //hide the navbar when modal appears
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[1];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+    modal.style.display = "none";
+    }
+
+    // MODAL3
+    var modal = document.getElementById("myModal3");
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("Project3");
+    var modalImg = document.getElementById("img03");
+    var captionText = document.getElementById("caption3");
+
+    // Get the NavBar to hide when modal is active
+    var navigation = document.getElementById("navigation");
+
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    navigation.style.display= "none"; //hide the navbar when modal appears
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[2];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+    modal.style.display = "none";
+    }
+
+    // MODAL4
+    var modal = document.getElementById("myModal4");
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("Project4");
+    var modalImg = document.getElementById("img04");
+    var captionText = document.getElementById("caption4");
+
+    // Get the NavBar to hide when modal is active
+    var navigation = document.getElementById("navigation");
+
+    img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    navigation.style.display= "none"; //hide the navbar when modal appears
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[3];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+    modal.style.display = "none";
+    navigation.style.display = "flex";
+    }
+
     </script>
-    
+
 </body>
 </html>

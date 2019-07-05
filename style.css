@@ -11,6 +11,7 @@ body, html {
 
 
 /* NAV BAR */
+
 .navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {  
     color: #E9D985;
 }
@@ -91,10 +92,27 @@ body, html {
 }
 
 .text{
-    /* background: white; */
     width: 100%;
     text-align: left;
-    /* font-size: 3vw; */
+}
+
+
+
+/* @media only screen and (max-width: 613px){
+    .text {
+      font-size: 75%;
+    }
+} */
+@media only screen and (max-width: 1100px){
+    .text {
+      font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .text {
+      font-size: 50%;
+    }
 }
 
 .row p {    
@@ -106,22 +124,16 @@ body, html {
 }
 
 
-/* #timeline h1{
-    color: black;
-} */
-
 #portfolio {
     background-color: #E9D985;
     padding: 10% 0;
 }
 
 footer {
-    /* background-color: #E9D985;
-    padding: 50px 0; */
     /* The image used */
     background-image: url("blur-colors-illuminated-714912.jpg");
     /* Full height */
-    height: 100%;
+    height: auto;
     /* Center and scale the image nicely */
     background-position: center;
     background-repeat: no-repeat;
@@ -137,12 +149,15 @@ footer {
     padding-top: 25%;
 }
 
-
-
 h1 {
     text-transform:uppercase;
     font-weight: bold;
     padding-bottom: 10%;
+}
+
+#contact h1 {
+    padding-bottom: 5%;
+    text-shadow: 3px 3px #343a40;
 }
 
 h3 {
@@ -156,11 +171,121 @@ h3 {
 .fab, .fas {
     color: #BCA118;
     font-size: 5em;
+    padding-bottom: 25%;
+}
+
+.fab:hover, .fas:hover
+{
+    opacity:0.7;
+}
+.fa-github, .fa-linkedin {
+    text-shadow: 5px 5px #343a40;
 }
 
 #skills, #kasandraWells, #portfolio, #timeline {
     font-family: 'Barlow Condensed', sans-serif;
 }
+
+/*============================
+ CODING PROJECTS IMAGE AND MODAL
+ ============================= */
+
+/* Zoom In #2 */
+.Project figure img{
+	width: 90%;
+	height: auto;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.Project figure:hover img {
+	width: 100%;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  }
+  
+  /* Modal Content (image) */
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 0rem;
+    border: 0px;;
+  }
+  
+  /* Caption of Modal Image */
+  .caption {
+    margin: auto;
+    display: block;
+    overflow-y: scroll;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color:white;
+    background-color:#343A40;
+    padding: 2%;
+    height: 150px;
+    font-size: 150%;
+    outline: 0;
+
+  }
+  
+  /* Add Animation */
+  .modal-content, .caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+
+  }
 /*==================================================================================
     TIMELINE STYLING
  =================================================================================*/
@@ -487,3 +612,9 @@ h3 {
      .fa-linkedin {
          padding-left: 5%;
      }
+
+     /* Hide NavBar when modal appears */
+
+     /* #navigation {
+        display: hide;
+    } */
